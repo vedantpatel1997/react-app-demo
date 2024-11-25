@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Vedant Patel 1.2
+          Vedant Patel 1.5
         </p>
         
       </header>
