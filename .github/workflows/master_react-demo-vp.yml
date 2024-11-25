@@ -69,6 +69,6 @@ jobs:
         with:
           app-name: 'React-demo-vp'
           slot-name: 'Production'
-          remove-existing-files: true
+          clean: true          
           package: .
           
