@@ -57,17 +57,15 @@ jobs:
         run: unzip release.zip
       
       - name: Login to Azure
-        uses: azure/login@v2
+        uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_F930925A47A34945915DDCDFBBD8A57F }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_98E000F030194628A45B729A14A7ADB1 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_110846269C6A43399F5C9962F66687B8 }}
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'React-demo-vp'
+          app-name: 'sample-auth-test'
           slot-name: 'Production'
           clean: true          
           package: .
